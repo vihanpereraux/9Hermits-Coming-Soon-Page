@@ -1,5 +1,9 @@
 @import url("https://use.typekit.net/hre7bsv.css");
 
+@font-face {
+    font-family: "gghh";
+    src: url(../fonts/yu.ttf);
+  }
 
 /* 
 Fonts added:

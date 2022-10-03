@@ -22,45 +22,72 @@
     
     <!-- getting custom styles -->
     <link rel="stylesheet" href="assets/css/styles.css">
+
+    <style>
+        @import url("https://use.typekit.net/hre7bsv.css");
+    </style>
 </head>
 <body>
     
     <div class="noise"></div>
     <div id="fractal-noise-wrapper">
-        <video class="fractal-noise-video" autoplay muted>
+        <video class="fractal-noise-video" autoplay playsinline muted>
             <source src="assets/vids/Animation.mp4" type="video/mp4">
         </video>
     </div>
-
+    <div id="src">Coming Soon</div>
     <header>
         <div class="heading-wrapper container">
-            <!-- <h1 id="comming-soon-text">Coming Soon</h1> -->
-            <div id="comming-soon-text"></div>
+            <div id="coming-soon-text"></div>
         </div>
     </header>
 
     <script>
-        var innerText = document.getElementById("comming-soon-text");
-        var text = new Blotter.Text("COMMING SOON", {
-            family: "roc-grotesk-wide",
-            size: 100,
-            fill: "white"
-        });
-        let material = new Blotter.RollingDistortMaterial();
-        material.uniforms.uSineDistortSpread.value = 0.000;
-        material.uniforms.uSineDistortCycleCount.value = 2;
-        material.uniforms.uSineDistortAmplitude.value = 0.03;
-        material.uniforms.uNoiseDistortVolatility.value = 15;
-        material.uniforms.uNoiseDistortAmplitude.value = 0.004;
-        material.uniforms.uRotation.value = 200;
-        material.uniforms.uSpeed.value = 0.18;
+        document.fonts.ready.then(() => {
+            var innerText = document.getElementById("coming-soon-text");
 
-        let blotter = new Blotter(material, {
-            texts: text
-        });
+            let windowWidth = screen.width;
 
-        let scope = blotter.forText(text);
-        scope.appendTo(innerText);
+            if(windowWidth > 1000){
+                var text = new Blotter.Text("Coming Soon", {
+                    family: "gghh",
+                    size: 100,
+                    fill: "white"
+                });
+            }
+
+            if (425 < windowWidth < 999){
+                var text = new Blotter.Text("Coming Soon", {
+                    family: "gghh",
+                    size: 90,
+                    fill: "white"
+                });
+            }
+
+            if(windowWidth < 424){
+                var text = new Blotter.Text("Coming Soon", {
+                    family: "gghh",
+                    size: 40,
+                    fill: "white"
+                });
+            }
+            
+            let material = new Blotter.RollingDistortMaterial();
+            material.uniforms.uSineDistortSpread.value = 0.000;
+            material.uniforms.uSineDistortCycleCount.value = 2;
+            material.uniforms.uSineDistortAmplitude.value = 0.03;
+            material.uniforms.uNoiseDistortVolatility.value = 15;
+            material.uniforms.uNoiseDistortAmplitude.value = 0.004;
+            material.uniforms.uRotation.value = 200;
+            material.uniforms.uSpeed.value = 0.18;
+
+            let blotter = new Blotter(material, {
+                texts: text
+            });
+
+            let scope = blotter.forText(text);
+            scope.appendTo(innerText); 
+        });
     </script>
 </body>
 </html>

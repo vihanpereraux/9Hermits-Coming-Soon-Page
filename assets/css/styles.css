@@ -1,8 +1,7 @@
 body{
     width: 100vw !important;
     height: 100vh !important;
-    overflow-y: hidden !important;
-    overflow-x: hidden !important;
+    overflow: hidden !important;
     position: relative !important;
     background-color: black !important;
 }
@@ -13,6 +12,9 @@ body{
     left: 50% !important;
     top: 50% !important;
     text-align: center !important;
+    font-family: roc-grotesk-wide, sans-serif !important;
+    font-weight: 500 !important;
+    font-style: normal !important;
 }
 h1{
     font-family: roc-grotesk-wide, sans-serif !important;
@@ -48,9 +50,21 @@ h1{
     width: 80% !important;
     /* width: 100vw; */
 }
-.b-canvas{
-    font-family: roc-grotesk-wide, sans-serif !important;
-    font-weight: 500 !important;
-    font-style: normal !important;
+#src{
+    /* display: none; */
+    opacity: 0 !important;
+    font-family: "gghh";
+    font-size: 0px;
+}
 
+@media only screen and (max-width: 600px) {
+    .fractal-noise-video{
+        position: absolute !important;
+        opacity: 1 !important;
+        transform: translate(-50%, -50%) !important;
+        top: 50%;
+        left: 50%;
+        width: 100% !important;
+        overflow: hidden;
+    }
 }
