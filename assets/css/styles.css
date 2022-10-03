@@ -4,20 +4,26 @@ body{
     overflow-y: hidden !important;
     overflow-x: hidden !important;
     position: relative !important;
+    background-color: black !important;
 }
 .heading-wrapper{
     position: absolute !important;
     transform: translate(-50%, -50%) !important;
     left: 50% !important;
     top: 50% !important;
+    text-align: center !important;
+}
+h1{
     font-family: roc-grotesk-wide, sans-serif !important;
     font-weight: 500 !important;
     font-style: normal !important;
-    font-size: 50px !important;
-}
-h1{
+    font-size: 90px !important;
     opacity: 1 !important;
     position: relative !important;
+    color: white !important;
+    z-index: 1001 !important;
+    text-align: center !important;
+    cursor: default !important;
 }
 
 .noise{
@@ -27,8 +33,8 @@ h1{
     width: 100vw !important;
     height: 100vh !important;
     content: "";
-    opacity: 0.075 !important;
+    opacity: 0.3 !important;
     z-index: 1000 !important;
     pointer-events: none !important;
-    background: url(../img/noise2.gif) !important;
+    background: url(../img/noise3.gif) !important;
 }
