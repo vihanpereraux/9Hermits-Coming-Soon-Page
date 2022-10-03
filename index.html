@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9Hermits - COMING SOON</title>
+
+    <!-- getting adobe fonts -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+
+    <!-- bootstrap v5.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" 
+        crossorigin="anonymous">
+
+    <!-- importing blotter js and animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/rollingDistortMaterial.min.js"></script>
+    
+    <!-- getting custom styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="noise"></div>
+    <header>
+        <div class="heading-wrapper">
+            <!-- <h1 id="comming-soon-text">Coming Soon</h1> -->
+            <div id="comming-soon-text"></div>
+        </div>
+    </header>
+
+    <script>
+        var innerText = document.getElementById("comming-soon-text");
+        var text = new Blotter.Text("COMMING SOON", {
+            family: "roc-grotesk-wide",
+            size: 100,
+            fill: "white"
+        });
+        let material = new Blotter.RollingDistortMaterial();
+        material.uniforms.uSineDistortSpread.value = 0.000;
+        material.uniforms.uSineDistortCycleCount.value = 2;
+        material.uniforms.uSineDistortAmplitude.value = 0.03;
+        material.uniforms.uNoiseDistortVolatility.value = 15;
+        material.uniforms.uNoiseDistortAmplitude.value = 0.004;
+        material.uniforms.uRotation.value = 200;
+        material.uniforms.uSpeed.value = 0.18;
+
+        let blotter = new Blotter(material, {
+            texts: text
+        });
+
+        let scope = blotter.forText(text);
+        scope.appendTo(innerText);
+    </script>
+</body>
+</html>
