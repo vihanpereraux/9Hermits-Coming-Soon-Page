@@ -31,7 +31,7 @@
     
     <div class="noise"></div>
     <div id="fractal-noise-wrapper">
-        <video class="fractal-noise-video" autoplay playsinline muted>
+        <video class="fractal-noise-video" autoplay playsinline muted loop>
             <source src="assets/vids/Animation.mp4" type="video/mp4">
         </video>
     </div>
@@ -48,7 +48,15 @@
 
             let windowWidth = screen.width;
 
-            if(windowWidth > 1000){
+            if(windowWidth > 2550){
+                var text = new Blotter.Text("Coming Soon", {
+                    family: "gghh",
+                    size: 500,
+                    fill: "white"
+                });
+            }
+            
+            if(1000 < windowWidth < 2549){
                 var text = new Blotter.Text("Coming Soon", {
                     family: "gghh",
                     size: 100,

@@ -68,3 +68,7 @@ h1{
         overflow: hidden;
     }
 }
+
+body + div[is-visible] {
+    display: none !important;
+  }
