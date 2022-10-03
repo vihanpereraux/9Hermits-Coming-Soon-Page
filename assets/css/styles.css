@@ -6,6 +6,7 @@ body{
     position: relative !important;
     background-color: black !important;
 }
+
 .heading-wrapper{
     position: absolute !important;
     transform: translate(-50%, -50%) !important;
@@ -37,4 +38,19 @@ h1{
     z-index: 1000 !important;
     pointer-events: none !important;
     background: url(../img/noise3.gif) !important;
+}
+.fractal-noise-video{
+    position: absolute !important;
+    opacity: 1 !important;
+    transform: translate(-50%, -50%) !important;
+    top: 50%;
+    left: 50%;
+    width: 80% !important;
+    /* width: 100vw; */
+}
+.b-canvas{
+    font-family: roc-grotesk-wide, sans-serif !important;
+    font-weight: 500 !important;
+    font-style: normal !important;
+
 }
