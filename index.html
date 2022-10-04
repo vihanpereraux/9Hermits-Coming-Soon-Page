@@ -46,39 +46,49 @@
         document.fonts.ready.then(() => {
             var innerText = document.getElementById("coming-soon-text");
 
-            let windowWidth = screen.width;
-
-            if(windowWidth > 2550){
-                var text = new Blotter.Text("Coming Soon", {
-                    family: "gghh",
-                    size: 500,
-                    fill: "white"
-                });
-            }
+            const mediaQuery = window.matchMedia('(min-width: 1024px)');
             
-            if(1000 < windowWidth < 2549){
+            if(mediaQuery.matches){
+                // alert('matched');
                 var text = new Blotter.Text("Coming Soon", {
                     family: "gghh",
                     size: 100,
-                    fill: "white"
+                    fill: "white" 
                 });
             }
+            // let windowWidth = screen.width;
 
-            if (425 < windowWidth < 999){
-                var text = new Blotter.Text("Coming Soon", {
-                    family: "gghh",
-                    size: 90,
-                    fill: "white"
-                });
-            }
+            // if(windowWidth > 2550){
+            //     var text = new Blotter.Text("Coming Soon", {
+            //         family: "gghh",
+            //         size: 500,
+            //         fill: "white"
+            //     });
+            // }
+            
+            // if(1000 < windowWidth < 2549){
+            //     var text = new Blotter.Text("Coming Soon", {
+            //         family: "gghh",
+            //         size: 100,
+            //         fill: "white"
+            //     });
+            // }
 
-            if(windowWidth < 424){
-                var text = new Blotter.Text("Coming Soon", {
-                    family: "gghh",
-                    size: 40,
-                    fill: "white"
-                });
-            }
+            // if (425 < windowWidth < 999){
+            //     var text = new Blotter.Text("Coming Soon", {
+            //         family: "gghh",
+            //         size: 90,
+            //         fill: "white"
+            //     });
+            // }
+
+            // if(windowWidth < 424){
+            //     var text = new Blotter.Text("Coming Soon", {
+            //         family: "gghh",
+            //         size: 40,
+            //         fill: "white"
+            //     });
+            // }
             
             let material = new Blotter.RollingDistortMaterial();
             material.uniforms.uSineDistortSpread.value = 0.000;
