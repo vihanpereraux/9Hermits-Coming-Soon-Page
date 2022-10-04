@@ -77,12 +77,12 @@ h1{
 }
 /* end of stylings for screens < 600px */
 
-.lolz{
+.element-one{
     position: absolute !important;
     opacity: 1;
-    right: 100px !important;
+    right: 120px !important;
     z-index: 0 !important;
-    width: 17% !important;
+    width: 12% !important;
     top: 50px !important;
     animation: animationOne 3s linear infinite !important;
 }
@@ -95,20 +95,149 @@ h1{
     }
 }
 
-.lolzz{
+.element-two{
     position: absolute !important;
-    opacity: .9;
-    left: 120px !important;
+    opacity: 1;
+    left: 130px !important;
     z-index: 0 !important;
-    width: 15% !important;
+    width: 12% !important;
     bottom: 50px !important;
-    /* background-color: rebeccapurple; */
-    animation: move2 10s linear infinite !important;
+    transform: rotate(200deg) !important;
+    animation: animationTwo 3s linear infinite !important;
 }
-@keyframes move2 {
-    100% {
-        /* top: 20vh; */
-        /* transform: rotate(-360deg); */
-        transform:rotate(360deg); 
+@keyframes animationTwo {
+    0%, 100%   {
+        margin-bottom: 60px;
+    }
+    50% {
+        margin-bottom: 80px;
+    }
+}
+
+.element-three{
+    position: absolute !important;
+    opacity: 1;
+    right: 180px !important;
+    z-index: 0 !important;
+    width: 5% !important;
+    bottom: 50px !important;
+    animation: animationThree 3s linear infinite !important;
+}
+@keyframes animationThree {
+    0%, 100%   {
+        margin-bottom: 90px;
+    }
+    50% {
+        margin-bottom: 110px;
+    }
+}
+
+.element-four{
+    position: absolute !important;
+    opacity: 1;
+    left: 250px !important;
+    z-index: 0 !important;
+    width: 6% !important;
+    bottom: 50px !important;
+    animation: animationFour 3s linear infinite !important;
+}
+@keyframes animationFour {
+    0%, 100%   {
+        top: 120px;
+    }
+    50% {
+        top: 140px;
+    }
+}
+
+/* stylings for footer */
+footer p {
+    position: absolute;
+    transform: translate(-50%) !important;
+    left: 50%;
+    bottom: 5px;
+    font-family: roc-grotesk-wide, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    color: white !important;
+    text-transform: uppercase;
+}
+/* end of stylings for footer */
+
+
+
+@media only screen and (max-width: 600px){
+    .element-one{
+        position: absolute !important;
+        opacity: 1;
+        right: 70px !important;
+        z-index: 0 !important;
+        width: 12% !important;
+        top: 250px !important;
+        animation: animationOne 3s linear infinite !important;
+    }
+    @keyframes animationOne {
+        0%, 100%   {
+            margin-top: 50px;
+        }
+        50% {
+            margin-top: 70px;
+        }
+    }
+
+    .element-two{
+        position: absolute !important;
+        opacity: 1;
+        left: 20px !important;
+        z-index: 0 !important;
+        width: 12% !important;
+        bottom: 250px !important;
+        transform: rotate(200deg) !important;
+        animation: animationTwo 3s linear infinite !important;
+    }
+    @keyframes animationTwo {
+        0%, 100%   {
+            margin-bottom: 60px;
+        }
+        50% {
+            margin-bottom: 80px;
+        }
+    }
+
+    .element-three{
+        position: absolute !important;
+        opacity: 1;
+        right: 80px !important;
+        z-index: 0 !important;
+        width: 5% !important;
+        bottom: 240px !important;
+        animation: animationThree 3s linear infinite !important;
+    }
+    @keyframes animationThree {
+        0%, 100%   {
+            margin-bottom: 90px;
+        }
+        50% {
+            margin-bottom: 110px;
+        }
+    }
+
+    .element-four{
+        position: absolute !important;
+        opacity: 1;
+        left: 50px !important;
+        z-index: 0 !important;
+        width: 6% !important;
+        top: 280px !important;
+        animation: animationFour 3s linear infinite !important;
+    }
+    @keyframes animationFour {
+        0%, 100%   {
+            top: 80px;
+        }
+        50% {
+            top: 140px;
+        }
     }
 }
