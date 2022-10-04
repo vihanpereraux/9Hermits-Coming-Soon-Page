@@ -6,6 +6,7 @@ body{
     background-color: black !important;
 }
 
+/* heading wrapper styles */
 .heading-wrapper{
     position: absolute !important;
     transform: translate(-50%, -50%) !important;
@@ -28,7 +29,9 @@ h1{
     text-align: center !important;
     cursor: default !important;
 }
+/* end of heading wrapper styles */
 
+/* fractal noise background styles */
 .noise{
     position: fixed !important;
     top: 0 !important;
@@ -36,27 +39,31 @@ h1{
     width: 100vw !important;
     height: 100vh !important;
     content: "";
-    opacity: 0.3 !important;
+    opacity: 1 !important;
     z-index: 1000 !important;
     pointer-events: none !important;
-    background: url(../img/noise3.gif) !important;
+    mix-blend-mode: screen;
+    /* background: url(../img/noise2.gif) !important; */
+    /* background-repeat: no-repeat !important; */
 }
 .fractal-noise-video{
     position: absolute !important;
     opacity: 1 !important;
     transform: translate(-50%, -50%) !important;
-    top: 50%;
-    left: 50%;
-    width: 80% !important;
-    /* width: 100vw; */
+    top: 50% !important;
+    left: 50% !important;
+    width: 80% !important; 
+    z-index: 0; 
 }
+/* end of fractal noise background styles */
+
 #src{
-    /* display: none; */
     opacity: 0 !important;
-    font-family: "gghh";
+    font-family: "roc grotesk wide";
     font-size: 0px;
 }
 
+/* stylings for screens < 600px */
 @media only screen and (max-width: 600px) {
     .fractal-noise-video{
         position: absolute !important;
@@ -68,7 +75,40 @@ h1{
         overflow: hidden;
     }
 }
+/* end of stylings for screens < 600px */
 
-body + div[is-visible] {
-    display: none !important;
-  }
+.lolz{
+    position: absolute !important;
+    opacity: 1;
+    right: 100px !important;
+    z-index: 0 !important;
+    width: 17% !important;
+    top: 50px !important;
+    animation: animationOne 3s linear infinite !important;
+}
+@keyframes animationOne {
+    0%, 100%   {
+        margin-top: 50px;
+    }
+    50% {
+        margin-top: 70px;
+    }
+}
+
+.lolzz{
+    position: absolute !important;
+    opacity: .9;
+    left: 120px !important;
+    z-index: 0 !important;
+    width: 15% !important;
+    bottom: 50px !important;
+    /* background-color: rebeccapurple; */
+    animation: move2 10s linear infinite !important;
+}
+@keyframes move2 {
+    100% {
+        /* top: 20vh; */
+        /* transform: rotate(-360deg); */
+        transform:rotate(360deg); 
+    }
+}

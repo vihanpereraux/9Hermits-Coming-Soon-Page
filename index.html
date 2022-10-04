@@ -30,82 +30,24 @@
 <body>
     
     <div class="noise"></div>
+
     <div id="fractal-noise-wrapper">
         <video class="fractal-noise-video" autoplay playsinline muted loop>
             <source src="assets/vids/Animation.mp4" type="video/mp4">
         </video>
     </div>
+    
     <div id="src">Coming Soon</div>
+    <img class="w-25 lolz" src="assets/img/game-console.png" alt="">
+    <!-- <img class="w-25 lolzz" src="assets/img/vr-box.png" alt=""> -->
+
     <header>
         <div class="heading-wrapper container">
             <div id="coming-soon-text"></div>
         </div>
     </header>
 
-    <script>
-        document.fonts.ready.then(() => {
-            var innerText = document.getElementById("coming-soon-text");
+    <script src="assets/js/text_animation.js"></script>
 
-            const mediaQuery = window.matchMedia('(min-width: 1024px)');
-            
-            if(mediaQuery.matches){
-                // alert('matched');
-                var text = new Blotter.Text("Coming Soon", {
-                    family: "gghh",
-                    size: 100,
-                    fill: "white" 
-                });
-            }
-            // let windowWidth = screen.width;
-
-            // if(windowWidth > 2550){
-            //     var text = new Blotter.Text("Coming Soon", {
-            //         family: "gghh",
-            //         size: 500,
-            //         fill: "white"
-            //     });
-            // }
-            
-            // if(1000 < windowWidth < 2549){
-            //     var text = new Blotter.Text("Coming Soon", {
-            //         family: "gghh",
-            //         size: 100,
-            //         fill: "white"
-            //     });
-            // }
-
-            // if (425 < windowWidth < 999){
-            //     var text = new Blotter.Text("Coming Soon", {
-            //         family: "gghh",
-            //         size: 90,
-            //         fill: "white"
-            //     });
-            // }
-
-            // if(windowWidth < 424){
-            //     var text = new Blotter.Text("Coming Soon", {
-            //         family: "gghh",
-            //         size: 40,
-            //         fill: "white"
-            //     });
-            // }
-            
-            let material = new Blotter.RollingDistortMaterial();
-            material.uniforms.uSineDistortSpread.value = 0.000;
-            material.uniforms.uSineDistortCycleCount.value = 2;
-            material.uniforms.uSineDistortAmplitude.value = 0.03;
-            material.uniforms.uNoiseDistortVolatility.value = 15;
-            material.uniforms.uNoiseDistortAmplitude.value = 0.004;
-            material.uniforms.uRotation.value = 200;
-            material.uniforms.uSpeed.value = 0.18;
-
-            let blotter = new Blotter(material, {
-                texts: text
-            });
-
-            let scope = blotter.forText(text);
-            scope.appendTo(innerText); 
-        });
-    </script>
 </body>
 </html>
