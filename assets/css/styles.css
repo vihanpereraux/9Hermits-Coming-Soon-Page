@@ -81,7 +81,7 @@ h1{
     width: 100vw !important;
     height: 100vh !important;
     content: "";
-    opacity: 0.05 !important;
+    opacity: 0.04 !important;
     z-index: 1000 !important;
     pointer-events: none !important;
     mix-blend-mode: screen;
@@ -195,7 +195,6 @@ footer p {
     color: white !important;
     text-transform: uppercase;
     background: none !important;
-    width: 100% !important;
     text-align: center !important;
 }
 /* end of stylings for footer */
