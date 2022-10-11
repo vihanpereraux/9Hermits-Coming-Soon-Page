@@ -6,6 +6,10 @@ body{
     background-color: black !important;
 }
 
+#testing{
+    display: none !important;
+}
+
 /* heading wrapper styles */
 .heading-wrapper{
     position: absolute !important;
@@ -63,20 +67,7 @@ h1{
     font-size: 0px;
 }
 
-/* stylings for screens < 600px */
-@media only screen and (max-width: 600px) {
-    .fractal-noise-video{
-        position: absolute !important;
-        opacity: 1 !important;
-        transform: translate(-50%, -50%) !important;
-        top: 50%;
-        left: 50%;
-        width: 100% !important;
-        overflow: hidden;
-    }
-}
-/* end of stylings for screens < 600px */
-
+/* top right element */
 .element-one{
     position: absolute !important;
     opacity: 1;
@@ -95,6 +86,7 @@ h1{
     }
 }
 
+/* bottom left element */
 .element-two{
     position: absolute !important;
     opacity: 1;
@@ -114,6 +106,7 @@ h1{
     }
 }
 
+/* bottom right element */
 .element-three{
     position: absolute !important;
     opacity: 1;
@@ -132,6 +125,7 @@ h1{
     }
 }
 
+/* top left element */
 .element-four{
     position: absolute !important;
     opacity: 1;
@@ -155,89 +149,183 @@ footer p {
     position: absolute;
     transform: translate(-50%) !important;
     left: 50%;
-    bottom: 5px;
+    bottom: 15px;
     font-family: roc-grotesk-wide, sans-serif;
     font-weight: 500;
     font-style: normal;
-    font-size: 15px;
+    font-size: 10px;
     color: white !important;
     text-transform: uppercase;
+    background: none !important;
+    width: 100% !important;
+    text-align: center !important;
 }
 /* end of stylings for footer */
 
+/* stylings for screens < 1200px -> includes elements */ 
+@media only screen and (max-width: 1200px) {
+    body{
+        overflow-x: hidden !important;
+    }
+    
+    .fractal-noise-video{
+        position: absolute !important;
+        opacity: 1 !important;
+        transform: translate(-50%, -50%) !important;
+        top: 50%;
+        left: 50%;
+        width: 100% !important;
+        overflow: hidden;
+    }
+    .b-canvas{
+        display: none !important;
+    }
+    #testing{
+        display: block !important;
+        position: absolute !important;
+        transform: translate(-50%, -50%) !important;
+        left: 50% !important;
+        top: 50% !important;
+        color: white !important;
+        font-size: 65px !important;
+        text-align: center !important;
+        width: 100% !important;
+        font-family: roc-grotesk-wide, sans-serif !important;
+        font-weight: 400 !important;
+    }
 
-
-@media only screen and (max-width: 600px){
+    /* top right icon */
     .element-one{
         position: absolute !important;
-        opacity: 1;
-        right: 70px !important;
+        transform: translate(-50%, -50%) !important;
+        top: 20% !important;
+        left: 50% !important;
         z-index: 0 !important;
-        width: 12% !important;
-        top: 250px !important;
+        width: 20% !important;
         animation: animationOne 3s linear infinite !important;
     }
-    @keyframes animationOne {
-        0%, 100%   {
-            margin-top: 50px;
-        }
-        50% {
-            margin-top: 70px;
-        }
-    }
-
+    /* bottom left icon */
     .element-two{
         position: absolute !important;
-        opacity: 1;
-        left: 20px !important;
+        transform: translate(-50%, -50%) !important;
+        left: 40% !important;
         z-index: 0 !important;
-        width: 12% !important;
-        bottom: 250px !important;
+        width: 20% !important;
+        bottom: 10% !important;
         transform: rotate(200deg) !important;
         animation: animationTwo 3s linear infinite !important;
     }
-    @keyframes animationTwo {
-        0%, 100%   {
-            margin-bottom: 60px;
-        }
-        50% {
-            margin-bottom: 80px;
-        }
-    }
-
+    /* bottom right icon */
     .element-three{
+        display: none !important;
         position: absolute !important;
         opacity: 1;
-        right: 80px !important;
+        right: 160px !important;
         z-index: 0 !important;
         width: 5% !important;
-        bottom: 240px !important;
+        bottom: 40vw !important;
         animation: animationThree 3s linear infinite !important;
     }
-    @keyframes animationThree {
-        0%, 100%   {
-            margin-bottom: 90px;
-        }
-        50% {
-            margin-bottom: 110px;
-        }
+    /* top left icon */
+    .element-four{
+        display: none !important;
+        position: absolute !important;
+        opacity: 1;
+        left: 170px !important;
+        z-index: 0 !important;
+        width: 6% !important;
+        top: 50vw !important;
+        animation: animationFour 3s linear infinite !important;
+    }
+
+}
+/* end of stylings for screens < 600px */
+
+/* stylings for screens < 768px */
+@media only screen and (max-width: 768px){
+    #testing{
+        font-size: 45px !important;
+    }
+}
+/* end of stylings for screens < 768px */
+
+/* stylings for screens < 500px */
+@media only screen and (max-width: 500px){
+    #testing{
+        font-size: 35px !important;
+    }
+
+    /* top right icon */
+    .element-one{
+        position: absolute !important;
+        transform: translate(-50%, -50%) !important;
+        top: 20% !important;
+        left: 50% !important;
+        z-index: 0 !important;
+        width: 30% !important;
+        animation: animationOne 3s linear infinite !important;
+    }
+    /* bottom left icon */
+    .element-two{
+        /* display: none !important; */
+        position: absolute !important;
+        transform: translate(-50%, -50%) !important;
+        left: 35% !important;
+        z-index: 0 !important;
+        width: 30% !important;
+        bottom: 10% !important;
+        transform: rotate(200deg) !important;
+        animation: animationTwo 3s linear infinite !important;
+    }
+}
+/* end of stylings for screens < 500px */
+
+
+/* elements for the landscape < 1200px */
+@media (max-width: 1200px) and (orientation:landscape){
+    .fractal-noise-video{
+        position: absolute !important;
+        opacity: 1 !important;
+        transform: translate(-50%, -50%) !important;
+        top: 50% !important;
+        left: 50% !important;
+        width: 60% !important; 
+        z-index: 0; 
+    }
+
+    #testing{
+        font-size: 45px !important;
+    }
+
+    /* top right icon */
+    .element-one{
+        display: none !important;
+    }
+
+    /* bottom left icon */
+    .element-two{
+        display: none !important;
+    }
+
+    /* bottom right icon */
+    .element-three{
+        display: none !important;
     }
 
     .element-four{
-        position: absolute !important;
-        opacity: 1;
-        left: 50px !important;
-        z-index: 0 !important;
-        width: 6% !important;
-        top: 280px !important;
-        animation: animationFour 3s linear infinite !important;
+        display: none !important;
     }
-    @keyframes animationFour {
-        0%, 100%   {
-            top: 80px;
-        }
-        50% {
-            top: 140px;
-        }
+}
+
+/* elements for the landscape < 900px */
+@media (max-width: 900px) and (orientation:landscape){
+    .fractal-noise-video{
+        position: absolute !important;
+        opacity: 1 !important;
+        transform: translate(-50%, -50%) !important;
+        top: 50% !important;
+        left: 50% !important;
+        width: 60% !important; 
+        z-index: 0; 
     }
 }

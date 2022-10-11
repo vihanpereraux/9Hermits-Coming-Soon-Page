@@ -11,30 +11,29 @@ document.fonts.ready.then(() => {
         // alert('works 1' + " - " + screen.width);
         var text = new Blotter.Text("Coming Soon", {
             family: "roc grotesk wide",
-            size: 100,
+            size: 85,
             fill: "white" 
         });
     }
 
     // tab styles
-    if (mediaQueryTwo.matches) {
-        // alert('works 2' + " - " + screen.width);
-        var text = new Blotter.Text("Coming Soon", {
-            family: "roc grotesk wide",
-            size: 60,
-            fill: "white" 
-        });
-    }
+    // if (mediaQueryTwo.matches) {
+    //     var text = new Blotter.Text("Coming Soon", {
+    //         family: "roc grotesk wide",
+    //         size: 60,
+    //         fill: "white" 
+    //     });
+    // }
 
     // mobile styles
-    if (mediaQueryThree.matches) {
-        // alert('works 3' + " - " + screen.width);
-        var text = new Blotter.Text("Coming Soon", {
-            family: "roc grotesk wide",
-            size: 40,
-            fill: "white" 
-        });
-    }
+    // if (mediaQueryThree.matches) {
+    //     // alert('works 3' + " - " + screen.width);
+    //     var text = new Blotter.Text("Coming Soon", {
+    //         family: "roc grotesk wide",
+    //         size: 40,
+    //         fill: "white" 
+    //     });
+    // }
     
     
     let material = new Blotter.RollingDistortMaterial();
