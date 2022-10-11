@@ -7,7 +7,7 @@
     <title>9Hermits - COMING SOON</title>
 
     <!-- getting adobe fonts -->
-    <link rel="stylesheet" href="assets/css/fonts.css">
+    <!-- <link rel="stylesheet" href="assets/css/fonts.css"> -->
 
     <!-- bootstrap v5.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" 
@@ -17,15 +17,21 @@
     <!-- importing blotter js and animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="assets/js/blotter.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/blotter.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Blotter/0.1.0/materials/rollingDistortMaterial.min.js"></script>
     
-    <!-- getting custom styles -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style>
         @import url("https://use.typekit.net/hre7bsv.css");
     </style>
+
+    <!-- getting adobe fonts -->
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <!-- loader styles -->
+    <link rel="stylesheet" href="assets/css/loader.css">
+    <!-- getting custom styles -->
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
     <!-- noise effect -->
@@ -62,6 +68,21 @@
             <p>nine hermits studio all rights resereved 2022</p>
         </div>
     </footer>
+
+    <!-- loader wrapper -->
+    <div class="loader-wrapper">
+        <h5 id="progress-text">Loading...</h5>
+        <div id="progress-bar"></div>
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <script>
+        $(window).on("load", function(){
+            setTimeout(function(){
+                $(".loader-wrapper").fadeOut("slow");
+            }, 4000)
+        })
+    </script>
 
     <script src="assets/js/text_animation.js"></script>
 
