@@ -4,11 +4,49 @@ body{
     overflow: hidden !important;
     position: relative !important;
     background-color: black !important;
+    cursor: none !important;
 }
 
 #testing{
     display: none !important;
 }
+
+/* customized cursor */
+.inner-cursor{
+    position: fixed;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #E61D2D !important;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transition: width 0.5s, height 0.5s;
+    z-index: 3;
+}
+
+.inner-cursor.grow{
+    width: 30px;
+    height: 30px;
+    transition: width 0.5s, height 0.5s;
+    background-color: white !important;
+}
+
+.outer-cursor{
+    position: fixed;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    transform: translate(-50%, -50%);
+    border: 1px solid #E61D2D !important;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: 0.1s;
+    z-index: 3;
+}
+/* end of customized cursor */
 
 /* heading wrapper styles */
 .heading-wrapper{
@@ -43,10 +81,10 @@ h1{
     width: 100vw !important;
     height: 100vh !important;
     content: "";
-    opacity: .08 !important;
+    opacity: 0.05 !important;
     z-index: 1000 !important;
     pointer-events: none !important;
-    mix-blend-mode: lighten;
+    mix-blend-mode: screen;
     background: url(../img/noise.gif) !important;
     /* background-repeat: no-repeat !important; */
 }
@@ -166,8 +204,16 @@ footer p {
 @media only screen and (max-width: 1200px) {
     body{
         overflow-x: hidden !important;
+        cursor: block !important;
     }
-    
+
+     .inner-cursor{
+        display: none !important;
+     }
+     .outer-cursor{
+        display: none !important;
+     }
+
     .fractal-noise-video{
         position: absolute !important;
         opacity: 1 !important;
