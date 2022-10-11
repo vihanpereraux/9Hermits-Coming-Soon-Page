@@ -43,11 +43,11 @@ h1{
     width: 100vw !important;
     height: 100vh !important;
     content: "";
-    opacity: 1 !important;
+    opacity: .08 !important;
     z-index: 1000 !important;
     pointer-events: none !important;
-    mix-blend-mode: screen;
-    /* background: url(../img/noise2.gif) !important; */
+    mix-blend-mode: lighten;
+    background: url(../img/noise.gif) !important;
     /* background-repeat: no-repeat !important; */
 }
 .fractal-noise-video{
